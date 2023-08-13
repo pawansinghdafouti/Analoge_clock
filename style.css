@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@300&family=Poppins&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'poppins' , sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+
+h1{
+    font-family: 'poppins' , sans-serif;
+    margin: 50px;
+    margin-left: -400px;
+}
+
+h1 span{
+    color: #ff7200;
+    text-decoration:underline;
+}
+
+#clock{
+    background-color: #fff;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    color:black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7),
+    0px 0px 20px rgba(252, 252, 252, 0.9);
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+#clock ul li {
+  list-style: none;
+  position: absolute;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+  inset: 5px;
+}
+
+#clock ul li span{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+} 
+
+#clock:after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#hour,#minute,#second{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour{
+    width: 5px;
+    height: 73px;
+    top: 92px;
+    background-color: red; 
+}
+#minute{
+    width: 4px;
+    height: 95px;
+    top: 67px;
+    background-color: blue;
+}
+#second{
+    width: 1%;
+    height: 122px;
+    top: 44px;
+    background-color: black;
+}
